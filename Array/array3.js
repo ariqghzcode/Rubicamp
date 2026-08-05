@@ -6,9 +6,16 @@ function manageStack(arr, operations) {
     operations.forEach(op => {
         if (op.startsWith("push:")) {
             let rawValue = op.split(":")[1];
-            let value = isNaN(Number(rawValue)) ? rawValue : Number(rawValue);
+            let value;
+            if (isNaN(Number(rawValue))) {
+                value = rawValue;
+            } else {
+                value = Number(rawValue);
+            }
+
             result.push(value);
             log.push(`Added ${value}`);
+            
         } else if (op === "pop") {
             let removed = result.pop();
             log.push(`Removed ${removed}`);
