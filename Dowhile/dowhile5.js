@@ -11,5 +11,5 @@ do {
         console.log("Percobaan " + percobaan + ": " + angkaRandom + " (ganjil, coba lagi)");
     }
     
-} while (angkaRandom % 2 !== 0);
+} while (angkaRandom % 2 == 1);
 console.log("Angka genap ditemukan: " + angkaRandom + " dalam " + percobaan + " percobaan");
