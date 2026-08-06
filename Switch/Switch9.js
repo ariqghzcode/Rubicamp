@@ -20,5 +20,6 @@ switch (tombol) {
         console.log("Tombol " + tombol + ": Pause")
         break;
     default:
+        console.log("tombol tidak valid")
         break;
 }
