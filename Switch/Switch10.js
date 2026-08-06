@@ -3,7 +3,7 @@ let bahasa = "EN";
 switch (bahasa) {
     case "ID":
         console.log("Language: Bahasa Indonesia")
-        console.log("Selamat Datang")
+        console.log("Selamat Datang! Ada yang bisa dibantu hari ini?")
         break;
     case "EN":
         console.log("Language: English")
@@ -11,11 +11,11 @@ switch (bahasa) {
         break;
     case "JP":
         console.log("Language: Japanese")
-        console.log("Selamat Datang")
+        console.log("いらっしゃいませ！何かお手伝いできることはありますか？")
         break;
     case "KR":
         console.log("Language: Korean")
-        console.log("Selamat Datang")
+        console.log("환영합니다! 오늘 무엇을 도와드릴까요?")
         break;
 
     default:
