@@ -1,6 +1,6 @@
 let bahasa = "EN";
 // Tulis kode switch statement di sini
-switch (bahasa) {
+switch (bahasa.toUpperCase) {
     case "ID":
         console.log("Language: Bahasa Indonesia")
         console.log("Selamat Datang! Ada yang bisa dibantu hari ini?")
