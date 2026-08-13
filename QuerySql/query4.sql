@@ -15,3 +15,12 @@ INSERT INTO employees VALUES
 (3, 'Bob', 'Johnson', 'bob.johnson@company.com', 55000.00, 'Engineering', '2021-06-10'),
 (4, 'Alice', 'Brown', 'alice.brown@company.com', 65000.00, 'Sales', '2018-11-05'),
 (5, 'Charlie', 'Wilson', 'charlie.wilson@company.com', 70000.00, 'Engineering', '2020-09-12');
+
+sqlite> SELECT * FROM employees WHERE hire_date BETWEEN '2019-03-20' AND '2020-09-12' OR salary > 65000  ORDER BY salary DESC; 
+╭────┬────────────┬───────────┬────────────────────────────┬────────┬─────────────┬────────────╮
+│ id │ first_name │ last_name │           email            │ salary │ department  │ hire_date  │
+╞════╪════════════╪═══════════╪════════════════════════════╪════════╪═════════════╪════════════╡
+│  5 │ Charlie    │ Wilson    │ charlie.wilson@company.com │  70000 │ Engineering │ 2020-09-12 │
+│  2 │ Jane       │ Smith     │ jane.smith@company.com     │  60000 │ Marketing   │ 2019-03-20 │
+│  1 │ John       │ Doe       │ john.doe@company.com       │  50000 │ Engineering │ 2020-01-15 │
+╰────┴────────────┴───────────┴────────────────────────────┴────────┴─────────────┴────────────╯
