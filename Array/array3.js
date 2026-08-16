@@ -1,28 +1,22 @@
 // Tulis function manageStack di sini
 function manageStack(arr, operations) {
-    let result = [...arr];
-    let log = [];
+    const log = [];
 
     operations.forEach(op => {
-        if (op.startsWith("push:")) {
-            let rawValue = op.split(":")[1];
-            let value;
-            if (isNaN(Number(rawValue))) {
-                value = rawValue;
-            } else {
-                value = Number(rawValue);
-            }
+        if (op.startsWith('push')) {
+            const value = isNaN(Number(op.slice(5))) ? op.slice(5) : Number(op.slice(5))
+            arr.push(value)
+            log.push(`Added ${value}`)
 
-            result.push(value);
-            log.push(`Added ${value}`);
-            
-        } else if (op === "pop") {
-            let removed = result.pop();
-            log.push(`Removed ${removed}`);
+        } else if (op.startsWith('pop')) {
+            const value = arr.pop();
+            log.push(`Removed ${value}`);
         }
-    });
-
-    return { result, log };
+    })
+    return {
+        result: arr,
+        log
+    };
 
 }
 console.log(manageStack([1, 2], ["push:3", "push:4", "pop"]));
